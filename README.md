@@ -1,2 +1,3 @@
 # python-challenge
 Module 3 Assignment
+Hello, welcome to my Module 3 Python Challenge repository. Here you should find two folders: PyBank and PyPoll. In each of these folders there should be a folder named "Resources", a folder named "Analysis", and a Python file that contains the code for the respective projects. In the "Resources" folder there should be the appropriate CSV file, and the "Analysis" folder is the destination of the final text file produced by the Python code. I had to name the Python code for PyPoll main_pypoll as I had already named the Python code for PyBank main.py, and my obviously computer would not accept two different files with the same name. 
