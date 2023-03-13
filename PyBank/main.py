@@ -1,6 +1,7 @@
 #Import dependencies
 import pandas as pd
 import numpy as np
+import csv
 
 #read in budget data csv and store in variable 'bdata'
 bdata_df = pd.read_csv("C:/Users/tsswi/python-challenge/PyBank/Resources/budget_data.csv", encoding= "utf-8")
