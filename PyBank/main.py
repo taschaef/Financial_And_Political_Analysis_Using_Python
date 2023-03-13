@@ -41,10 +41,26 @@ most_loss = (bdata_df.loc[bdata_df["Profit/Losses"] == greatest_decrease])
 most_loss_date = "Dec-10"
 
 #Make summary table
-print("Financial Analysis")
-print("--------------------------------------")
-print("Total Months: " + str(total_months))
-print("Net Total: "+ str(net_total_currency))
-print("Average Change: " + str(ave_change_currency))
-print("Greatest Increase in Profits: " + str(most_profit_date) + "  " + str(greatest_increase_currency))
-print("Greatest Decrease in Profits: " + str(most_loss_date) + "  " + str(greatest_decrease_currency))
+#print("Financial Analysis")
+#print("--------------------------------------")
+#print("Total Months: " + str(total_months))
+#print("Net Total: "+ str(net_total_currency))
+#print("Average Change: " + str(ave_change_currency))
+#print("Greatest Increase in Profits: " + str(most_profit_date) + "  " + str(greatest_increase_currency))
+#print("Greatest Decrease in Profits: " + str(most_loss_date) + "  " + str(greatest_decrease_currency))
+
+
+#F string Summary Table 
+PyBank_Results = (f'Financial Analysis \n'
+                  f'-------------------------------- \n'
+                  f'Total Months: {total_months} \n' 
+                 f'Net Total: {net_total_currency} \n'
+                 f'Average Change: {ave_change_currency} \n'
+                 f'Greatest Increase in Profits: {most_profit_date} ({greatest_increase_currency}) \n'
+                 f'Greatest Decrease in Profits: {most_loss_date} ({greatest_decrease_currency}) \n') 
+
+print(PyBank_Results)
+
+#write a text file to folder analysis
+with open("C:/Users/tsswi/python-challenge/PyBank/analysis/PyBank_analysis.txt", "w", encoding= "utf-8") as newtxt:
+    newtxt.write(PyBank_Results)
