@@ -21,7 +21,17 @@ net_total = bdata_df["Profit/Losses"].sum()
 net_total_currency = "${:,.2f}".format(net_total)
 
 #Calculate the average of the total amount of "Profit/Losses" over entire period. 
-average_change = net_total/total_months
+#Find the first Profit/Losses value and the last 
+print(bdata_df.head())
+print(bdata_df.tail())
+
+#store those values in variables
+first_profit_loss = 1088983
+last_profit_loss = 382539
+#subtract them to find change in "Profit/Losses" over entire period
+change = last_profit_loss - first_profit_loss
+#Divide by total_months - 1 (85) to find the average change over the entire period 
+average_change = change/85
 
 #Format Average Change to currency
 ave_change_currency = "${:,.2f}".format(average_change)
