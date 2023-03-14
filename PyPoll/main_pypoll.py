@@ -23,14 +23,14 @@ CCS_count = 85213
 RAD_count = 11606
 
 #Calculate percentages of votes won
-DDG_percent = (DDG_count/total_votes)
-CCS_percent = (CCS_count/total_votes)
-RAD_percent = (RAD_count/total_votes)
+DDG_percent = (DDG_count/total_votes)*100
+CCS_percent = (CCS_count/total_votes)*100
+RAD_percent = (RAD_count/total_votes)*100
 
-#convert to percentages using "+"{:.2%}".format(x)
-DDG_percent_final = "{:.0%}".format(DDG_percent)
-CCS_percent_final = "{:.0%}".format(CCS_percent)
-RAD_percent_final = "{:.0%}".format(RAD_percent)
+#convert to percentages using "+"{:.3f}".format(x)
+DDG_percent_final = "{:.3f}".format(DDG_percent)
+CCS_percent_final = "{:.3f}".format(CCS_percent)
+RAD_percent_final = "{:.3f}".format(RAD_percent)
 
 
 #Summary table
@@ -49,9 +49,9 @@ PyPoll_analysis = (f'Election Results \n'
                  f'------------------------------------ \n'
                  f'Total Votes: {total_votes} \n'
                  f'------------------------------------ \n'
-                 f'Charles Casper Stockham: {CCS_percent_final} ({CCS_count}) \n'
-                 f'Diana DeGette: {DDG_percent_final} ({DDG_count}) \n'
-                 f'Raymon Anthony Doane: {RAD_percent_final} ({RAD_count}) \n'
+                 f'Charles Casper Stockham: {CCS_percent_final}% ({CCS_count}) \n'
+                 f'Diana DeGette: {DDG_percent_final}% ({DDG_count}) \n'
+                 f'Raymon Anthony Doane: {RAD_percent_final}% ({RAD_count}) \n'
                  f'------------------------------------- \n'
                  f'Winner: Diana DeGette \n')
 
